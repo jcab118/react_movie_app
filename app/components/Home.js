@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 
 import omdb_api from './../api/omdb_api';
@@ -26,7 +27,8 @@ export default class Home extends Component {
         if(this.state.title) {
           return (
             <div className="movie-search-movie">
-
+              {/* wrap this img tag in an atag...add the according redirect target: blank... */}
+              {/* remember to add https:// to the url or the link will not redirect */}
               <div className="movie-poster-div">
                 <a href={"https://www.imdb.com/title/" + this.state.title.imdbID} target="_blank"><img className="movie-poster" align="center" src={this.state.title.Poster}/><p className="imdb-page-link-tag" align="center">{this.state.title.Title}</p></a>
               </div>
@@ -47,7 +49,7 @@ export default class Home extends Component {
       }
       return (
         <div>
-          <h3 className="movie-header">React Movie Searcher</h3>
+          <h3 className="movie-header">React Movie App</h3>
           <form>
             <input
                className="movie-input"
